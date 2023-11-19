@@ -28,19 +28,19 @@ void selection_sort(int *array, size_t size)
 	if (array == NULL || size <= 1)
 		return;
 
-    i = 0;
+	i = 0;
 	while (i < size - 1)
 	{
 		m = array + i;
 		for (j = i + 1; j < size; j++)
-            if (array[j] < *m)
-                m = (array + j);
+			if (array[j] < *m)
+				m = (array + j);
 
 		if ((array + i) != m)
 		{
-			swp(array + i, min);
+			swp(array + i, m);
 			print_array(array, size);
 		}
-        i++;
+		i++;
 	}
 }
