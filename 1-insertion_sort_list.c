@@ -19,7 +19,7 @@ void swap(listint_t **hug, listint_t **num1, listint_t **num2)
 		*
 		hug = (*num2);
 	(*num1)->prev = (*num2);
-	*num1 = num2->prev;
+	*num1 = (*num2)->prev;
 }
 
 /**
