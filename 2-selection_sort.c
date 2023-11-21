@@ -3,9 +3,9 @@
 /**
  * swp - Swaping two ints in an array.
  * @i: The first integer to swap.
- * @j: The second integer to swap.
+ * @j: The second integer to swap it.
  */
-void swp(int *i, int *j)
+void swp(int *j, int *i)
 {
 	int temp;
 
