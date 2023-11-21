@@ -2,7 +2,7 @@
 
 /**
  *swap - Swap 2 nodes in a listint_t doubly-linked list.
- *@hug: address to the head of the d-linked list.
+ *@hug: address to the head of the doubly-linked list.
  *@num1: address to the first node to swap.
  *@num2: second node to swap.
  */
@@ -12,7 +12,9 @@ void swap(listint_t **hug, listint_t **num1, listint_t **num2)
 	if ((*num2)->next != NULL)
 		(*num2)->next->prev = *num1;
 	(*num2)->next = *num1;
-	(*num1)->prev->next = (*num2);
+	(*num2)->prev = (*num1)->prev;
+	if ((*num1)->prev != NULL)
+		(*num1)->prev->next = (*num2);
 	else
 		*
 		hug = (*num2);
@@ -21,8 +23,8 @@ void swap(listint_t **hug, listint_t **num1, listint_t **num2)
 }
 
 /**
- *insertion_sort_list - Insert sorting a doubly linked list
- *@list: Address of  the head of a doubly-linked list of integers.
+ *insertion_sort_list - Insert sorts a doubly linked list
+ *@list: Address of the head of a d-linked list of integers.
  *Return: void
  */
 void insertion_sort_list(listint_t **list)
